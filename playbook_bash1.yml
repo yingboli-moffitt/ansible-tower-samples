@@ -1,16 +1,9 @@
 ---
+- gather_facts: false
 - name: hosts all
   hosts: all
 
   tasks:
 
   - name: testing multiple cmd in a shell
-    shell:  |
-      hostname
-      whoami
-      uname -a
-      ifconfig -a
-      date
-      time
-      java -version
-      ansible --version
+    shell: "hostname; whoami; uname -a; ifconfig -a; date; time; java -version; ansible --version"
