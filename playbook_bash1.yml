@@ -2,13 +2,15 @@
 - name: Hello World!
   hosts: all
 
-- name: show system and user information from shell
-  shell: |
-    hostname
-    whoami
-    uname -a
-    ifconfig -a
-    date
-    time
-    java -version
-    ansible --version
+  tasks:
+
+  - name: testing multiple cmd in a shell
+    shell:  |
+	  hostname
+	  whoami
+	  uname -a
+	  ifconfig -a
+	  date
+	  time
+	  java -version
+	  ansible --version
