@@ -1,5 +1,4 @@
 ---
-- gather_facts: false
 - name: hosts all
   hosts: all
 
