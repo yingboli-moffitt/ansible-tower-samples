@@ -1,0 +1,11 @@
+---
+- name: Hello World!
+  hosts: all
+
+  tasks:
+
+  - command: "{{ item }}"
+    with_items:
+    - hostname
+    - whoami
+    - 'uname -a'
