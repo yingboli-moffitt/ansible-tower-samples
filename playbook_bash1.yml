@@ -1,15 +1,14 @@
 ---
 - name: Hello World!
   hosts: all
-  
-  tasks:
-    - name: show system and user information from shell
-      ansible.builtin.shell: |
-        hostname
-        whoami
-        uname -a
-        ifconfig -a
-        date
-        time
-        java -version
-        ansible --version
+
+- name: show system and user information from shell
+  shell: |
+    hostname
+    whoami
+    uname -a
+    ifconfig -a
+    date
+    time
+    java -version
+    ansible --version
