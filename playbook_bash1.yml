@@ -1,14 +1,13 @@
 ---
-connection: ssh
-gather_facts: false
 hosts: all
 tasks:
   - name: show system and user information from shell
-    ansible.builtin.shell:
-          cmd: hostname
-          cmd: whoami
-          cmd: uname -a
-          cmd: ifconfig -a
-          cmd: date
-          cmd: time
-          cmd: java -version
+    ansible.builtin.shell: |
+      hostname
+      whoami
+      uname -a
+      ifconfig -a
+      date
+      time
+      java -version
+      ansible --version
